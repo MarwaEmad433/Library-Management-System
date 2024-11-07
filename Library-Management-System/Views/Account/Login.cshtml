@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+
+<!-- تضمين مكتبة Font Awesome للأيقونات -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <!-- صندوق تسجيل الدخول -->
+            <div class="card text-center">
+                <div class="card-header">
+                    <h4>Logged as</h4> <!-- النص العلوي -->
+                </div>
+                <div class="card-body">
+                    <!-- زر User -->
+                    <a href="/Account/UserLogin" class="btn btn-primary btn-block mb-3" style="color: white;">
+                        <i class="fas fa-user" style="color: white;"></i> User
+                    </a>
+                    <!-- زر Admin -->
+                    <a href="/Account/AdminLogin" class="btn btn-primary btn-block" style="color: white;">
+                        <i class="fas fa-user-shield" style="color: white;"></i> Admin
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* إضافة مسافة بين navbar والجدول */
+    .navbar {
+        margin-bottom: 100px; /* ضبط المسافة حسب الحاجة */
+    }
+
+    /* إضافة مسافة بين البطاقة والفوتر */
+    .card {
+        margin-bottom: 150px; /* إضافة مسافة سفلية للبطاقة */
+    }
+</style>

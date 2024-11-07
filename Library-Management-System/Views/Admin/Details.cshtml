@@ -1,0 +1,29 @@
+﻿@model Library_Management_System.Models.Book
+
+<div class="container">
+    <h2 class="mt-4" style="margin-bottom:30px;  background-color: black; color: white; padding: 10px;">Book Details</h2> <!-- Added background color and text color -->
+
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Title: @Model.BookTitle</h3>
+            <p><strong>Author:</strong> @Model.BookAuthor</p>
+            <p><strong>Category:</strong> @Model.BookCategory</p>
+            <p><strong>ISBN:</strong> @Model.BookISBN</p>
+            <p><strong>Status:</strong> @Model.BookStatus</p>
+            <p><strong>Date Added:</strong> @Model.BookDateAdded.ToShortDateString()</p>
+
+            <div class="mt-4">
+                <a href="@Url.Action("Books", "Admin")" class="btn btn-secondary" style="color: white;">Back to Books</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<style>
+    /* Additional styles for the footer */
+    footer {
+        padding: 70px 0;
+    }
+</style>

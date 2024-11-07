@@ -1,0 +1,97 @@
+﻿@model IEnumerable<Library_Management_System.Models.Transaction>
+
+@{
+    ViewBag.Title = "Accepted Book Requests";
+ }
+
+
+
+<h2 class="my-4" style="padding-bottom: 10px; text-align: center; ">Accepted Book Requests</h2>
+
+<!-- شريط البحث -->
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div class="form-inline">
+        <label for="searchBox" class="mr-2" style="color: black; margin-left:80px;">Search:</label>
+        <input type="text" id="searchBox" class="form-control" placeholder="Search for accepted requests..." style="width: 300px; margin-left: 5px;">
+    </div>
+</div>
+
+<!-- جدول الطلبات المعتمدة -->
+<div class="table-responsive">
+    <table class="table table-striped table-bordered" style="width: 100%; margin: 0 auto;">
+        <thead class="thead-dark">
+            <tr>
+                <th>Book Title</th>
+                <th>Book ISBN</th>
+                <th>Accept Date</th> <!-- تغيير العنوان إلى Accept Date -->
+                <th>User Name</th>
+            </tr>
+        </thead>
+        <tbody id="acceptedRequestsTable">
+            @foreach (var request in Model)
+            {
+                <tr>
+                    <td>@request.BookTitle</td>
+                    <td>@request.BookISBN</td>
+                    <td>@request.TranDate.ToShortDateString()</td> <!-- استخدام TranDate كتاريخ الموافقة -->
+                    <td>@request.Username</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<style>
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #ccc; /* إضافة خط تحت العنوان */
+        padding-bottom: 10px;
+    }
+
+    .table-responsive {
+        padding: 5px;
+        width: 90%;
+        margin: 0 auto;
+        padding-bottom: 50px;
+    }
+
+    thead th {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    tbody td {
+        text-align: center;
+    }
+
+    .thead-dark {
+        background-color: #343a40;
+        color: white;
+    }
+
+    .btn-sm {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+</style>
+
+<!-- سكربت بحث -->
+<script>
+    document.getElementById('searchBox').addEventListener('keyup', function () {
+        let filter = this.value.toLowerCase();
+        let rows = document.querySelectorAll('#acceptedRequestsTable tr');
+
+        rows.forEach(row => {
+            let title = row.cells[0].textContent.toLowerCase();
+            let isbn = row.cells[1].textContent.toLowerCase();
+            let user = row.cells[3].textContent.toLowerCase();
+
+            if (title.includes(filter) || isbn.includes(filter) || user.includes(filter)) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+        });
+    });
+</script>

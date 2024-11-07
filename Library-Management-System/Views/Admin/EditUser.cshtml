@@ -1,0 +1,86 @@
+﻿@model Library_Management_System.Models.User
+
+<div class="container mt-4">
+    <h2 style="background-color: black; color: white; padding: 10px; margin-bottom: 70px;">Edit User</h2> <!-- عنوان مظلل مثل صفحة Edit Book -->
+
+    <form asp-action="EditUser" method="post">
+        <input type="hidden" asp-for="UserID" />
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="Usernames">Usernames</label>
+                    <input asp-for="Usernames" class="form-control" placeholder="Enter Username" />
+                    <span asp-validation-for="Usernames" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="UserGender">User Gender</label>
+                    <input asp-for="UserGender" class="form-control" placeholder="Enter Gender" />
+                    <span asp-validation-for="UserGender" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="UserDep">User Department</label>
+                    <input asp-for="UserDep" class="form-control" placeholder="Enter Department" />
+                    <span asp-validation-for="UserDep" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="UserAdmNo">User Admission Number</label>
+                    <input asp-for="UserAdmNo" class="form-control" placeholder="Enter Admission Number" />
+                    <span asp-validation-for="UserAdmNo" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="UserEmail">User Email</label>
+                    <input asp-for="UserEmail" class="form-control" placeholder="Enter Email" />
+                    <span asp-validation-for="UserEmail" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="UserPassword">User Password</label>
+                    <input asp-for="UserPassword" type="password" class="form-control" value="@Model.UserPassword" placeholder="Enter Password" />
+                    <span asp-validation-for="UserPassword" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Update User</button>
+            <a href="/Admin/Users" class="btn btn-secondary" style="color: white; margin-left: 20px;">Back</a> <!-- زر العودة -->
+        </div>
+    </form>
+</div>
+
+<style>
+    footer {
+        margin-top: 80px; /* المسافة بين الفوتر والنافبار */
+    }
+
+    .form-group label {
+        color: black; /* تغيير لون عناوين الجدول إلى الأسود */
+        font-weight: bold; /* جعل النص عريض */
+    }
+
+    h2 {
+        margin-bottom: 70px; /* مسافة بين العنوان وبداية النموذج */
+        padding: 10px; /* إضافة حشوة */
+        background-color: black; /* خلفية سوداء */
+        color: white; /* نص أبيض */
+    }
+</style>

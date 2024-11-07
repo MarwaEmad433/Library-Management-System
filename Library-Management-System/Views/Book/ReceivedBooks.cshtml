@@ -1,0 +1,67 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model IEnumerable<Library_Management_System.Models.Transaction>
+
+@{
+    ViewBag.Title = "Received Books";
+    var successMessage = TempData["SuccessMessage"] as string; // للحصول على الرسالة
+}
+
+@if (!string.IsNullOrEmpty(successMessage)) // التحقق مما إذا كانت الرسالة موجودة
+{
+    <div class="alert alert-success" role="alert">
+        @successMessage
+    </div>
+}
+
+<h2 style="text-align: center; padding-bottom: 10px; border-bottom: 1px solid lightgray;">Received Books</h2>
+
+<div class="container mt-4">
+    <div class="row">
+        @foreach (var book in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">@book.BookTitle</h5>
+                        <hr>
+                        <p class="card-text"><strong>ISBN:</strong> @book.BookISBN</p>
+                        <p class="card-text mb-3"><strong>Received Date:</strong> @book.TranDate.ToShortDateString()</p> <!-- إضافة مسافة سفلية -->
+                        <div class="d-flex justify-content-between">
+                            <a href="@Url.Action("Read", "Book", new { id = book.TranID })" class="btn btn-primary me-2" style="margin-left:2px;">Read</a>
+                            <a href="#" data-id="@book.TranID" class="btn btn-danger" style="margin-right:2px;">Return</a> <!-- إضافة data-id هنا -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).on('click', '.btn-danger', function (e) {
+        e.preventDefault(); // Prevent the default action
+
+        var button = $(this); // Get the clicked button
+        var id = button.data('id'); // Get the ID from the button data attribute
+
+        $.ajax({
+            url: '@Url.Action("ReturnBook", "Book")', // URL to the ReturnBook action
+            type: 'POST',
+            data: { id: id },
+            success: function (response) {
+                if (response.success) {
+                    // Remove the card from the view
+                    button.closest('.col-md-4').remove();
+                    alert(response.message); // Show success message
+                }
+            },
+            error: function () {
+                alert('Error returning the book.'); // Show error message
+            }
+        });
+    });
+</script>

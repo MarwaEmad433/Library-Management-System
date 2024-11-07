@@ -1,0 +1,321 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\projects\\project_.net\\final_project\\Library-Management-System\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4B0DE16C-CC1A-4E72-B849-AF6AF7F8251B}|Library-Management-System\\Library-Management-System.csproj|d:\\projects\\project_.net\\final_project\\library-management-system\\library-management-system\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B0DE16C-CC1A-4E72-B849-AF6AF7F8251B}|Library-Management-System\\Library-Management-System.csproj|solutionrelative:library-management-system\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B0DE16C-CC1A-4E72-B849-AF6AF7F8251B}|Library-Management-System\\Library-Management-System.csproj|d:\\projects\\project_.net\\final_project\\library-management-system\\library-management-system\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B0DE16C-CC1A-4E72-B849-AF6AF7F8251B}|Library-Management-System\\Library-Management-System.csproj|solutionrelative:library-management-system\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/DESKTOP_07CK9HF/Library_MVC/True/SqlTable/dbo.Transactions.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/DESKTOP_07CK9HF/Library_MVC/True/SqlTable/dbo.Books.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B0DE16C-CC1A-4E72-B849-AF6AF7F8251B}|Library-Management-System\\Library-Management-System.csproj|d:\\projects\\project_.net\\final_project\\library-management-system\\library-management-system\\views\\admin\\accepted.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4B0DE16C-CC1A-4E72-B849-AF6AF7F8251B}|Library-Management-System\\Library-Management-System.csproj|solutionrelative:library-management-system\\views\\admin\\accepted.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B0DE16C-CC1A-4E72-B849-AF6AF7F8251B}|Library-Management-System\\Library-Management-System.csproj|d:\\projects\\project_.net\\final_project\\library-management-system\\library-management-system\\views\\account\\userlogin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4B0DE16C-CC1A-4E72-B849-AF6AF7F8251B}|Library-Management-System\\Library-Management-System.csproj|solutionrelative:library-management-system\\views\\account\\userlogin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B0DE16C-CC1A-4E72-B849-AF6AF7F8251B}|Library-Management-System\\Library-Management-System.csproj|d:\\projects\\project_.net\\final_project\\library-management-system\\library-management-system\\views\\shared\\_mylayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4B0DE16C-CC1A-4E72-B849-AF6AF7F8251B}|Library-Management-System\\Library-Management-System.csproj|solutionrelative:library-management-system\\views\\shared\\_mylayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B0DE16C-CC1A-4E72-B849-AF6AF7F8251B}|Library-Management-System\\Library-Management-System.csproj|d:\\projects\\project_.net\\final_project\\library-management-system\\library-management-system\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B0DE16C-CC1A-4E72-B849-AF6AF7F8251B}|Library-Management-System\\Library-Management-System.csproj|solutionrelative:library-management-system\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B0DE16C-CC1A-4E72-B849-AF6AF7F8251B}|Library-Management-System\\Library-Management-System.csproj|d:\\projects\\project_.net\\final_project\\library-management-system\\library-management-system\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4B0DE16C-CC1A-4E72-B849-AF6AF7F8251B}|Library-Management-System\\Library-Management-System.csproj|solutionrelative:library-management-system\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B0DE16C-CC1A-4E72-B849-AF6AF7F8251B}|Library-Management-System\\Library-Management-System.csproj|d:\\projects\\project_.net\\final_project\\library-management-system\\library-management-system\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4B0DE16C-CC1A-4E72-B849-AF6AF7F8251B}|Library-Management-System\\Library-Management-System.csproj|solutionrelative:library-management-system\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B0DE16C-CC1A-4E72-B849-AF6AF7F8251B}|Library-Management-System\\Library-Management-System.csproj|d:\\projects\\project_.net\\final_project\\library-management-system\\library-management-system\\views\\book\\booklist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4B0DE16C-CC1A-4E72-B849-AF6AF7F8251B}|Library-Management-System\\Library-Management-System.csproj|solutionrelative:library-management-system\\views\\book\\booklist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B0DE16C-CC1A-4E72-B849-AF6AF7F8251B}|Library-Management-System\\Library-Management-System.csproj|d:\\projects\\project_.net\\final_project\\library-management-system\\library-management-system\\views\\admin\\returnedrequests.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4B0DE16C-CC1A-4E72-B849-AF6AF7F8251B}|Library-Management-System\\Library-Management-System.csproj|solutionrelative:library-management-system\\views\\admin\\returnedrequests.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B0DE16C-CC1A-4E72-B849-AF6AF7F8251B}|Library-Management-System\\Library-Management-System.csproj|d:\\projects\\project_.net\\final_project\\library-management-system\\library-management-system\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B0DE16C-CC1A-4E72-B849-AF6AF7F8251B}|Library-Management-System\\Library-Management-System.csproj|solutionrelative:library-management-system\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B0DE16C-CC1A-4E72-B849-AF6AF7F8251B}|Library-Management-System\\Library-Management-System.csproj|d:\\projects\\project_.net\\final_project\\library-management-system\\library-management-system\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B0DE16C-CC1A-4E72-B849-AF6AF7F8251B}|Library-Management-System\\Library-Management-System.csproj|solutionrelative:library-management-system\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B0DE16C-CC1A-4E72-B849-AF6AF7F8251B}|Library-Management-System\\Library-Management-System.csproj|d:\\projects\\project_.net\\final_project\\library-management-system\\library-management-system\\views\\book\\requestedbooks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4B0DE16C-CC1A-4E72-B849-AF6AF7F8251B}|Library-Management-System\\Library-Management-System.csproj|solutionrelative:library-management-system\\views\\book\\requestedbooks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B0DE16C-CC1A-4E72-B849-AF6AF7F8251B}|Library-Management-System\\Library-Management-System.csproj|d:\\projects\\project_.net\\final_project\\library-management-system\\library-management-system\\views\\book\\rejectedbooks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4B0DE16C-CC1A-4E72-B849-AF6AF7F8251B}|Library-Management-System\\Library-Management-System.csproj|solutionrelative:library-management-system\\views\\book\\rejectedbooks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B0DE16C-CC1A-4E72-B849-AF6AF7F8251B}|Library-Management-System\\Library-Management-System.csproj|d:\\projects\\project_.net\\final_project\\library-management-system\\library-management-system\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B0DE16C-CC1A-4E72-B849-AF6AF7F8251B}|Library-Management-System\\Library-Management-System.csproj|solutionrelative:library-management-system\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B0DE16C-CC1A-4E72-B849-AF6AF7F8251B}|Library-Management-System\\Library-Management-System.csproj|d:\\projects\\project_.net\\final_project\\library-management-system\\library-management-system\\views\\book\\receivedbooks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4B0DE16C-CC1A-4E72-B849-AF6AF7F8251B}|Library-Management-System\\Library-Management-System.csproj|solutionrelative:library-management-system\\views\\book\\receivedbooks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B0DE16C-CC1A-4E72-B849-AF6AF7F8251B}|Library-Management-System\\Library-Management-System.csproj|d:\\projects\\project_.net\\final_project\\library-management-system\\library-management-system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B0DE16C-CC1A-4E72-B849-AF6AF7F8251B}|Library-Management-System\\Library-Management-System.csproj|solutionrelative:library-management-system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\projects\\project_.net\\final_project\\Library-Management-System\\Library-Management-System\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Library-Management-System\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\projects\\project_.net\\final_project\\Library-Management-System\\Library-Management-System\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Library-Management-System\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAIwD4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T02:32:11.423Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "D:\\projects\\project_.net\\final_project\\Library-Management-System\\Library-Management-System\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Library-Management-System\\Controllers\\AdminController.cs",
+              "ToolTip": "D:\\projects\\project_.net\\final_project\\Library-Management-System\\Library-Management-System\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Library-Management-System\\Controllers\\AdminController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB0BAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T16:45:31.917Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BookController.cs",
+              "DocumentMoniker": "D:\\projects\\project_.net\\final_project\\Library-Management-System\\Library-Management-System\\Controllers\\BookController.cs",
+              "RelativeDocumentMoniker": "Library-Management-System\\Controllers\\BookController.cs",
+              "ToolTip": "D:\\projects\\project_.net\\final_project\\Library-Management-System\\Library-Management-System\\Controllers\\BookController.cs",
+              "RelativeToolTip": "Library-Management-System\\Controllers\\BookController.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAkwDAAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T23:11:24.788Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "dbo.Transactions [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/DESKTOP_07CK9HF/Library_MVC/True/SqlTable/dbo.Transactions.sql",
+              "ToolTip": "dbo.Transactions [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-10-13T05:00:01.257Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "dbo.Books [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/DESKTOP_07CK9HF/Library_MVC/True/SqlTable/dbo.Books.sql",
+              "ToolTip": "dbo.Books [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-10-13T07:03:52.789Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserLogin.cshtml",
+              "DocumentMoniker": "D:\\projects\\project_.net\\final_project\\Library-Management-System\\Library-Management-System\\Views\\Account\\UserLogin.cshtml",
+              "RelativeDocumentMoniker": "Library-Management-System\\Views\\Account\\UserLogin.cshtml",
+              "ToolTip": "D:\\projects\\project_.net\\final_project\\Library-Management-System\\Library-Management-System\\Views\\Account\\UserLogin.cshtml",
+              "RelativeToolTip": "Library-Management-System\\Views\\Account\\UserLogin.cshtml",
+              "ViewState": "AQIAACUAAAAAAAAAAAAAAEEAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-13T05:14:51.403Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Accepted.cshtml",
+              "DocumentMoniker": "D:\\projects\\project_.net\\final_project\\Library-Management-System\\Library-Management-System\\Views\\Admin\\Accepted.cshtml",
+              "RelativeDocumentMoniker": "Library-Management-System\\Views\\Admin\\Accepted.cshtml",
+              "ToolTip": "D:\\projects\\project_.net\\final_project\\Library-Management-System\\Library-Management-System\\Views\\Admin\\Accepted.cshtml",
+              "RelativeToolTip": "Library-Management-System\\Views\\Admin\\Accepted.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-09T16:20:12.15Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\projects\\project_.net\\final_project\\Library-Management-System\\Library-Management-System\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Library-Management-System\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\projects\\project_.net\\final_project\\Library-Management-System\\Library-Management-System\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Library-Management-System\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABQAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T04:18:16.027Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_MyLayout.cshtml",
+              "DocumentMoniker": "D:\\projects\\project_.net\\final_project\\Library-Management-System\\Library-Management-System\\Views\\Shared\\_MyLayout.cshtml",
+              "RelativeDocumentMoniker": "Library-Management-System\\Views\\Shared\\_MyLayout.cshtml",
+              "ToolTip": "D:\\projects\\project_.net\\final_project\\Library-Management-System\\Library-Management-System\\Views\\Shared\\_MyLayout.cshtml",
+              "RelativeToolTip": "Library-Management-System\\Views\\Shared\\_MyLayout.cshtml",
+              "ViewState": "AQIAADcAAAAAAAAAAAAAAD8AAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-08T01:47:44.398Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "About.cshtml",
+              "DocumentMoniker": "D:\\projects\\project_.net\\final_project\\Library-Management-System\\Library-Management-System\\Views\\Home\\About.cshtml",
+              "RelativeDocumentMoniker": "Library-Management-System\\Views\\Home\\About.cshtml",
+              "ToolTip": "D:\\projects\\project_.net\\final_project\\Library-Management-System\\Library-Management-System\\Views\\Home\\About.cshtml",
+              "RelativeToolTip": "Library-Management-System\\Views\\Home\\About.cshtml",
+              "ViewState": "AQIAADQAAAAAAAAAAAAIwDoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-13T04:16:29.886Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\projects\\project_.net\\final_project\\Library-Management-System\\Library-Management-System\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Library-Management-System\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\projects\\project_.net\\final_project\\Library-Management-System\\Library-Management-System\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Library-Management-System\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAGEAAAAAAAAAAAAAAHoAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-13T04:16:31.704Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ReturnedRequests.cshtml",
+              "DocumentMoniker": "D:\\projects\\project_.net\\final_project\\Library-Management-System\\Library-Management-System\\Views\\Admin\\ReturnedRequests.cshtml",
+              "RelativeDocumentMoniker": "Library-Management-System\\Views\\Admin\\ReturnedRequests.cshtml",
+              "ToolTip": "D:\\projects\\project_.net\\final_project\\Library-Management-System\\Library-Management-System\\Views\\Admin\\ReturnedRequests.cshtml",
+              "RelativeToolTip": "Library-Management-System\\Views\\Admin\\ReturnedRequests.cshtml",
+              "ViewState": "AQIAABwAAAAAAAAAAAAkwCsAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-09T16:20:29.056Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\projects\\project_.net\\final_project\\Library-Management-System\\Library-Management-System\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Library-Management-System\\Models\\User.cs",
+              "ToolTip": "D:\\projects\\project_.net\\final_project\\Library-Management-System\\Library-Management-System\\Models\\User.cs",
+              "RelativeToolTip": "Library-Management-System\\Models\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T16:17:17.173Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BookList.cshtml",
+              "DocumentMoniker": "D:\\projects\\project_.net\\final_project\\Library-Management-System\\Library-Management-System\\Views\\Book\\BookList.cshtml",
+              "RelativeDocumentMoniker": "Library-Management-System\\Views\\Book\\BookList.cshtml",
+              "ToolTip": "D:\\projects\\project_.net\\final_project\\Library-Management-System\\Library-Management-System\\Views\\Book\\BookList.cshtml",
+              "RelativeToolTip": "Library-Management-System\\Views\\Book\\BookList.cshtml",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAADUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-08T02:25:48.252Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "RequestedBooks.cshtml",
+              "DocumentMoniker": "D:\\projects\\project_.net\\final_project\\Library-Management-System\\Library-Management-System\\Views\\Book\\RequestedBooks.cshtml",
+              "RelativeDocumentMoniker": "Library-Management-System\\Views\\Book\\RequestedBooks.cshtml",
+              "ToolTip": "D:\\projects\\project_.net\\final_project\\Library-Management-System\\Library-Management-System\\Views\\Book\\RequestedBooks.cshtml",
+              "RelativeToolTip": "Library-Management-System\\Views\\Book\\RequestedBooks.cshtml",
+              "ViewState": "AQIAABUAAAAAAAAAAAAIwDEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-07T01:56:07.938Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "RejectedBooks.cshtml",
+              "DocumentMoniker": "D:\\projects\\project_.net\\final_project\\Library-Management-System\\Library-Management-System\\Views\\Book\\RejectedBooks.cshtml",
+              "RelativeDocumentMoniker": "Library-Management-System\\Views\\Book\\RejectedBooks.cshtml",
+              "ToolTip": "D:\\projects\\project_.net\\final_project\\Library-Management-System\\Library-Management-System\\Views\\Book\\RejectedBooks.cshtml",
+              "RelativeToolTip": "Library-Management-System\\Views\\Book\\RejectedBooks.cshtml",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAACgAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-08T03:23:13.671Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "D:\\projects\\project_.net\\final_project\\Library-Management-System\\Library-Management-System\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Library-Management-System\\Models\\ErrorViewModel.cs",
+              "ToolTip": "D:\\projects\\project_.net\\final_project\\Library-Management-System\\Library-Management-System\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Library-Management-System\\Models\\ErrorViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T05:03:22.835Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ReceivedBooks.cshtml",
+              "DocumentMoniker": "D:\\projects\\project_.net\\final_project\\Library-Management-System\\Library-Management-System\\Views\\Book\\ReceivedBooks.cshtml",
+              "RelativeDocumentMoniker": "Library-Management-System\\Views\\Book\\ReceivedBooks.cshtml",
+              "ToolTip": "D:\\projects\\project_.net\\final_project\\Library-Management-System\\Library-Management-System\\Views\\Book\\ReceivedBooks.cshtml",
+              "RelativeToolTip": "Library-Management-System\\Views\\Book\\ReceivedBooks.cshtml",
+              "ViewState": "AQIAABoAAAAAAAAAAAAAAEMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-06T23:10:31.796Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\projects\\project_.net\\final_project\\Library-Management-System\\Library-Management-System\\Program.cs",
+              "RelativeDocumentMoniker": "Library-Management-System\\Program.cs",
+              "ToolTip": "D:\\projects\\project_.net\\final_project\\Library-Management-System\\Library-Management-System\\Program.cs",
+              "RelativeToolTip": "Library-Management-System\\Program.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAIwDkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T03:49:52.312Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

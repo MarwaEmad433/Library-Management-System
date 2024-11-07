@@ -1,0 +1,85 @@
+﻿@model IEnumerable<dynamic>
+
+<header>
+    <h1 class="text-center">Rejected Books</h1>
+    <hr class="my-4">
+</header>
+
+<div class="row">
+    @foreach (var request in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card" style="height: 200px; width: 400px;margin-left:30px">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                        <h5 class="card-title">@request.Title</h5>
+                        <p class="card-text">
+                            <span style="color: black;">Author:</span> @request.Author
+                        </p>
+                        <p class="card-text">
+                            <span style="color: black;">Requested on:</span> @request.RequestDate.ToString("yyyy-MM-dd")
+                        </p>
+                    </div>
+
+                    <div class="d-flex justify-content-between mt-auto">
+                        <!-- زر إعادة الطلب -->
+                        <form method="post" action="/book/ReRequest" class="re-request-form">
+                            <input type="hidden" name="requestId" value="@request.RequestId" />
+                            <button type="submit" class="btn btn-success">Re-request</button>
+                        </form>
+
+                        <!-- زر إلغاء الطلب -->
+                        <form method="post" action="/book/CancelRequest" class="cancel-request-form">
+                            <input type="hidden" name="requestId" value="@request.RequestId" />
+                            <button type="submit" class="btn btn-danger">Cancel Request</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+   
+
+    <script>
+        $(document).ready(function () {
+            // التعامل مع حذف الكارد عند نجاح العملية بدون عرض أي رسائل
+
+            // معالجة نموذج إعادة الطلب
+            $('.re-request-form').submit(function (event) {
+                event.preventDefault(); // منع السلوك الافتراضي للنموذج
+                var form = $(this);
+                $.ajax({
+                    type: form.attr('method'),
+                    url: form.attr('action'),
+                    data: form.serialize(),
+                    success: function (response) {
+                        if (response.success) {
+                            form.closest('.card').remove(); // حذف الكارد من الصفحة
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        console.error("An error occurred: " + error); // عرض الخطأ فقط في وحدة التحكم للمطور
+                    }
+                });
+            });
+
+            // معالجة نموذج إلغاء الطلب
+            $('.cancel-request-form').submit(function (event) {
+                event.preventDefault(); // منع السلوك الافتراضي للنموذج
+                var form = $(this);
+                $.ajax({
+                    type: form.attr('method'),
+                    url: form.attr('action'),
+                    data: form.serialize(),
+                    success: function (response) {
+                        if (response.success) {
+                            form.closest('.card').remove(); // حذف الكارد من الصفحة
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        console.error("An error occurred: " + error); // عرض الخطأ فقط في وحدة التحكم للمطور
+                    }
+                });
+            });
+        });
+    </script>

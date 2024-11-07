@@ -1,0 +1,127 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Library_Management_System
+build_property.RootNamespace = Library_Management_System
+build_property.ProjectDir = D:\projects\project_.net\final_project\Library-Management-System\Library-Management-System\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\projects\project_.net\final_project\Library-Management-System\Library-Management-System
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/projects/project_.net/final_project/Library-Management-System/Library-Management-System/Views/Account/AdminLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZG1pbkxvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/project_.net/final_project/Library-Management-System/Library-Management-System/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/project_.net/final_project/Library-Management-System/Library-Management-System/Views/Account/UserLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxVc2VyTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/project_.net/final_project/Library-Management-System/Library-Management-System/Views/Admin/Accepted.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWNjZXB0ZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/project_.net/final_project/Library-Management-System/Library-Management-System/Views/Admin/AddBook.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkQm9vay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/project_.net/final_project/Library-Management-System/Library-Management-System/Views/Admin/AddUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkVXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/project_.net/final_project/Library-Management-System/Library-Management-System/Views/Admin/Books.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQm9va3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/project_.net/final_project/Library-Management-System/Library-Management-System/Views/Admin/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/project_.net/final_project/Library-Management-System/Library-Management-System/Views/Admin/EditBook.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdEJvb2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/project_.net/final_project/Library-Management-System/Library-Management-System/Views/Admin/EditUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdFVzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/project_.net/final_project/Library-Management-System/Library-Management-System/Views/Admin/Requests.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUmVxdWVzdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/project_.net/final_project/Library-Management-System/Library-Management-System/Views/Admin/ReturnedRequests.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUmV0dXJuZWRSZXF1ZXN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/project_.net/final_project/Library-Management-System/Library-Management-System/Views/Admin/UserDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXNlckRldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/project_.net/final_project/Library-Management-System/Library-Management-System/Views/Admin/Users.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXNlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/project_.net/final_project/Library-Management-System/Library-Management-System/Views/Book/BookList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xCb29rTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/project_.net/final_project/Library-Management-System/Library-Management-System/Views/Book/ReceivedBooks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xSZWNlaXZlZEJvb2tzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/project_.net/final_project/Library-Management-System/Library-Management-System/Views/Book/RejectedBooks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xSZWplY3RlZEJvb2tzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/project_.net/final_project/Library-Management-System/Library-Management-System/Views/Book/RequestedBooks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xSZXF1ZXN0ZWRCb29rcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/project_.net/final_project/Library-Management-System/Library-Management-System/Views/Home/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/project_.net/final_project/Library-Management-System/Library-Management-System/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/project_.net/final_project/Library-Management-System/Library-Management-System/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/project_.net/final_project/Library-Management-System/Library-Management-System/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/project_.net/final_project/Library-Management-System/Library-Management-System/Views/Shared/_MyLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NeUxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/project_.net/final_project/Library-Management-System/Library-Management-System/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/project_.net/final_project/Library-Management-System/Library-Management-System/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/project_.net/final_project/Library-Management-System/Library-Management-System/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/project_.net/final_project/Library-Management-System/Library-Management-System/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-2bjpc0k6w8

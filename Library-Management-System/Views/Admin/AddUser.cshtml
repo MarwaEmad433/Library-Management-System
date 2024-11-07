@@ -1,0 +1,107 @@
+﻿@model Library_Management_System.Models.User
+
+@{
+    ViewBag.Title = "Add User";
+}
+
+<style>
+    .form-container {
+        max-width: 600px; /* تحديد عرض النموذج */
+        margin: 0 auto; /* وضع النموذج في المنتصف */
+        padding: 20px; /* إضافة padding حول النموذج */
+        background-color: #f9f9f9; /* خلفية للنموذج */
+        border-radius: 10px; /* تدوير الحواف */
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
+    }
+
+        .form-container h2 {
+            text-align: center; /* جعل العنوان في منتصف الصفحة */
+            color: #333; /* لون النص */
+        }
+
+    .form-group label {
+        font-weight: bold; /* جعل النص عريض */
+        color: black; /* لون النص الأسود */
+        margin-bottom: 10px; /* مسافة أسفل الـ label */
+        display: block; /* عرض كبلوك */
+    }
+
+    .form-group input, .form-group select {
+        margin-bottom: 20px; /* مسافة أسفل كل حقل */
+        width: 100%; /* جعل العرض 100% */
+        padding: 10px; /* إضافة مسافة داخلية */
+        border: 1px solid #ccc; /* إطار الحقل */
+        border-radius: 5px; /* تدوير الحواف */
+    }
+
+    .form-control::placeholder {
+        color: #aaa; /* لون الـ placeholder */
+    }
+
+    .form-group .text-danger {
+        font-size: 0.9em; /* جعل النص التحذيري أصغر قليلاً */
+        margin-top: -15px; /* تقليل المسافة أعلى النص */
+        display: block; /* عرض كبلوك */
+    }
+
+    .btn-submit {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff; /* لون أزرق */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        .btn-submit:hover {
+            background-color: #0056b3; /* تأثير عند التمرير يصبح أزرق داكن */
+        }
+</style>
+
+<div class="form-container">
+    <h2 class="my-4">Add User</h2>
+
+    <form asp-action="AddUser" method="post" class="form-horizontal">
+        <div class="form-group">
+            <label asp-for="Usernames">Username</label>
+            <input asp-for="Usernames" class="form-control" placeholder="Enter username" />
+            <span asp-validation-for="Usernames" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="UserGender">Gender</label>
+            <input asp-for="UserGender" class="form-control" placeholder="Enter gender" />
+            <span asp-validation-for="UserGender" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="UserDep">Department</label>
+            <input asp-for="UserDep" class="form-control" placeholder="Enter department" />
+            <span asp-validation-for="UserDep" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="UserAdmNo">Admission Number</label>
+            <input asp-for="UserAdmNo" class="form-control" placeholder="Enter admission number" />
+            <span asp-validation-for="UserAdmNo" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="UserEmail">Email</label>
+            <input asp-for="UserEmail" class="form-control" placeholder="Enter email" />
+            <span asp-validation-for="UserEmail" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="UserPassword">Password</label>
+            <input asp-for="UserPassword" type="password" class="form-control" placeholder="Enter password" />
+            <span asp-validation-for="UserPassword" class="text-danger"></span>
+        </div>
+
+        <div class="form-group text-center">
+            <button type="submit" class="btn-submit">Add User</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,139 @@
+﻿@model IEnumerable<Library_Management_System.Models.Book>
+
+@{
+    ViewBag.Title = "Book List";
+}
+
+<h2 class="my-4" style="padding-bottom: 10px;">Available Books</h2>
+
+<!-- Search Toolbar -->
+<div class="row mb-4">
+    <div class="col-md-6 text-right">
+        <div class="form-inline" style="justify-content: flex-end;">
+            <label for="searchBox" class="mr-2" style="color: black;">Search:</label>
+            <input type="text" id="searchBox" class="form-control" placeholder="Search for books..." style="width: 500px; margin-left: 5px;">
+        </div>
+    </div>
+</div>
+
+<!-- Books Table -->
+<div class="table-responsive">
+    <table class="table table-striped table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Author</th>
+                <th>Copies</th>
+                <th>ISBN</th>
+                <th>Date Added</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="bookTable">
+            @foreach (var book in Model)
+            {
+                <tr>
+                    <td>@book.BookTitle</td>
+                    <td>@book.BookCategory</td>
+                    <td>@book.BookAuthor</td>
+                    <td>@book.BookCopies</td>
+                    <td>@book.BookISBN</td>
+                    <td>@book.BookDateAdded.ToShortDateString()</td>
+                    <td>@book.BookStatus</td>
+                    <td>
+                        <button class="btn btn-primary request-button" data-book-id="@book.BookID">Request</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+
+<style>
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 10px;
+    }
+
+    .table-responsive {
+        padding: 5px;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    thead th {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    tbody td {
+        text-align: center;
+    }
+
+    .thead-dark {
+        background-color: #343a40;
+        color: white;
+    }
+
+    /* Search Toolbar */
+    .form-inline {
+        display: flex;
+        align-items: center;
+    }
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    // Search functionality
+    document.getElementById("searchBox").addEventListener("keyup", function () {
+        var searchValue = this.value.toLowerCase();
+        var rows = document.querySelectorAll("#bookTable tr");
+
+        rows.forEach(function (row) {
+            var title = row.querySelector("td:nth-child(1)").textContent.toLowerCase();
+            var category = row.querySelector("td:nth-child(2)").textContent.toLowerCase();
+            var author = row.querySelector("td:nth-child(3)").textContent.toLowerCase();
+
+            if (title.includes(searchValue) || category.includes(searchValue) || author.includes(searchValue)) {
+                row.style.display = "";
+            } else {
+                row.style.display = "none";
+            }
+        });
+    });
+
+    // Handle book request
+    $(document).ready(function () {
+        $('.request-button').on('click', function () {
+            var bookId = $(this).data('book-id');
+
+            $.ajax({
+                url: '/Book/RequestBook',
+                type: 'POST',
+                data: { bookId: bookId },
+                success: function (data) {
+                    console.log(data); // لطباعة البيانات المُستلمة في وحدة التحكم
+                    if (data.success) {
+                        alert(data.message);
+                        // إضافة الكتاب المطلوب إلى قائمة الكتب المطلوبة
+                        $('#requestedBooksList').append('<li>' + data.Title + '</li>');
+                    } else {
+                        alert('Error: ' + data.message);
+                    }
+                },
+                error: function (xhr, status, error) {
+                    alert('An error occurred: ' + error);
+                    console.error(error); // طباعة الخطأ في وحدة التحكم
+                }
+            });
+        });
+    });
+
+
+</script>

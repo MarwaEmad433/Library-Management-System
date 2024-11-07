@@ -1,0 +1,96 @@
+﻿@model Library_Management_System.Models.Book
+
+<div class="container mt-4">
+    <h2 style="background-color: black; color: white; padding: 10px; margin-bottom: 70px;">Edit Book</h2> <!-- Titled with background color and text color -->
+    @using (Html.BeginForm("EditBook", "Admin", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.BookTitle)
+                    @Html.TextBoxFor(m => m.BookTitle, new { @class = "form-control", placeholder = "Enter Book Title" })
+                    @Html.ValidationMessageFor(m => m.BookTitle, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.BookCategory)
+                    @Html.TextBoxFor(m => m.BookCategory, new { @class = "form-control", placeholder = "Enter Book Category" })
+                    @Html.ValidationMessageFor(m => m.BookCategory, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.BookAuthor)
+                    @Html.TextBoxFor(m => m.BookAuthor, new { @class = "form-control", placeholder = "Enter Author Name" })
+                    @Html.ValidationMessageFor(m => m.BookAuthor, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.BookCopies)
+                    @Html.TextBoxFor(m => m.BookCopies, new { @class = "form-control", placeholder = "Number of Copies" })
+                    @Html.ValidationMessageFor(m => m.BookCopies, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.BookISBN)
+                    @Html.TextBoxFor(m => m.BookISBN, new { @class = "form-control", placeholder = "Enter ISBN" })
+                    @Html.ValidationMessageFor(m => m.BookISBN, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.BookStatus)
+                    @Html.TextBoxFor(m => m.BookStatus, new { @class = "form-control", placeholder = "Enter Book Status" })
+                    @Html.ValidationMessageFor(m => m.BookStatus, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.BookDateAdded)
+                    @Html.TextBoxFor(m => m.BookDateAdded, new { @class = "form-control", type = "date", value = @DateTime.Now.ToString("yyyy - MM - dd") })
+                    @Html.ValidationMessageFor(m => m.BookDateAdded, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Edit</button>
+            <a href="@Url.Action("Books", "Admin")" class="btn btn-secondary" style="color: white;">Back</a>
+        </div>
+    }
+</div>
+
+<style>
+    footer {
+        margin-top: 80px; /* المسافة بين الفوتر والنافبار */
+    }
+
+    .form-group label {
+        color: black; /* تغيير لون عناوين الجدول إلى الأسود */
+    }
+
+    h2 {
+        margin-bottom: 70px; /* مسافة بين العنوان وبداية النموذج */
+        padding: 10px; /* إضافة حشوة */
+        background-color: black; /* خلفية سوداء */
+        color: white; /* نص أبيض */
+    }
+</style>

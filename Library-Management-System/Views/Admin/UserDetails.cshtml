@@ -1,0 +1,99 @@
+﻿@model Library_Management_System.Models.User
+
+<div class="container mt-5">
+    <h1 class="text-white text-center bg-dark p-3">User Details</h1> <!-- عنوان مظلل -->
+
+    <form>
+        <input type="hidden" asp-for="UserID" />
+
+        <div class="form-group">
+            <label asp-for="Usernames" class="text-black">Usernames</label>
+            <input asp-for="Usernames" class="form-control" readonly />
+            <span asp-validation-for="Usernames" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="UserGender" class="text-black">User Gender</label>
+            <input asp-for="UserGender" class="form-control" readonly />
+            <span asp-validation-for="UserGender" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="UserDep" class="text-black">User Department</label>
+            <input asp-for="UserDep" class="form-control" readonly />
+            <span asp-validation-for="UserDep" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="UserAdmNo" class="text-black">User Admission Number</label>
+            <input asp-for="UserAdmNo" class="form-control" readonly />
+            <span asp-validation-for="UserAdmNo" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="UserEmail" class="text-black">User Email</label>
+            <input asp-for="UserEmail" class="form-control" readonly />
+            <span asp-validation-for="UserEmail" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="UserPassword" class="text-black">User Password</label>
+            <div class="input-group">
+                <input asp-for="UserPassword" type="password" class="form-control" id="passwordField" value="@Model.UserPassword" readonly />
+                <div class="input-group-append">
+                    <span class="input-group-text">
+                        <i class="fa fa-eye" id="togglePassword" onclick="togglePasswordVisibility()" style="cursor: pointer;"></i> <!-- رمز العين -->
+                    </span>
+                </div>
+            </div>
+            <span asp-validation-for="UserPassword" class="text-danger"></span>
+        </div>
+
+        <div class="button-group mt-4">
+            <a href="@Url.Action("EditUser", "Admin", new { id = Model.UserID })" class="btn btn-warning" style=" color:white;">Edit</a>
+            <a href="@Url.Action("Users", "Admin")" class="btn btn-secondary" style="margin-left: 20px; color:white;">Back</a> <!-- زر العودة -->
+        </div>
+    </form>
+</div>
+
+<style>
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px; /* إضافة مسافة داخلية */
+    }
+
+    h1 {
+        margin-bottom: 20px; /* مسافة بين العنوان والجدول */
+    }
+
+    .form-group {
+        margin-bottom: 15px; /* مسافة بين حقول الإدخال */
+    }
+
+    /* إضافة تنسيق إضافي للعناوين */
+    label {
+        color: black; /* اللون الأسود */
+        font-weight: bold; /* جعل النص عريض */
+    }
+</style>
+
+<script>
+    function togglePasswordVisibility() {
+        var passwordField = document.getElementById("passwordField");
+        var toggleIcon = document.getElementById("togglePassword");
+
+        if (passwordField.type === "password") {
+            passwordField.type = "text";
+            toggleIcon.classList.remove("fa-eye");
+            toggleIcon.classList.add("fa-eye-slash");
+        } else {
+            passwordField.type = "password";
+            toggleIcon.classList.remove("fa-eye-slash");
+            toggleIcon.classList.add("fa-eye");
+        }
+    }
+</script>
+
+<!-- رابط لخطوط أيقونات FontAwesome للرمز -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">

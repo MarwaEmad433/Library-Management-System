@@ -1,0 +1,141 @@
+﻿
+
+@model IEnumerable<Library_Management_System.Models.User>
+
+@{
+    ViewBag.Title = "Users";
+    var successMessage = TempData["SuccessMessage"] as string;
+}
+
+@if (!string.IsNullOrEmpty(successMessage))
+{
+    <div class="alert alert-success" role="alert">
+        @successMessage
+    </div>
+}
+
+<h2 class="my-4" style="padding-bottom: 10px;">Registered Users</h2>
+
+<!-- Search Toolbar and Add User Button in the same row -->
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <a href="/admin/AddUser" class="btn btn-success" style="margin-left: 80px; color: white;">Add New User</a>
+
+    <div class="form-inline">
+        <label for="searchBox" class="mr-2" style="color: black;">Search:</label>
+        <input type="text" id="searchBox" class="form-control" placeholder="Search for users..." style="width: 300px; margin-left: 5px; margin-right: 80px;">
+    </div>
+</div>
+
+<!-- Users Table -->
+<div class="table-responsive">
+    <table class="table table-striped table-bordered" style="width: 100%; margin: 0 auto;">
+        <thead class="thead-dark">
+            <tr>
+                <th>Username</th>
+                <th>Gender</th>
+                <th>Department</th>
+                <th>Admission No</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="userTable">
+            @foreach (var user in Model)
+            {
+                <tr id="userRow_@user.UserID">
+                    <td>@user.Usernames</td>
+                    <td>@user.UserGender</td>
+                    <td>@user.UserDep</td>
+                    <td>@user.UserAdmNo</td>
+                    <td>@user.UserEmail</td>
+                    <td>
+                        <a href="/Admin/EditUser/@user.UserID" class="btn btn-warning btn-sm" style="color:white;">Edit</a>
+                        <a href="/Admin/UserDetails/@user.UserID" class="btn btn-info btn-sm" style="color:white;">Details</a>
+                        <button class="btn btn-danger btn-sm delete-btn" data-user-id="@user.UserID" style="color:white;">Delete</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<style>
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 10px;
+    }
+
+    .table-responsive {
+        padding: 5px;
+        width: 90%;
+        margin: 0 auto;
+        padding-bottom: 50px;
+    }
+
+    thead th {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    tbody td {
+        text-align: center;
+    }
+
+    .thead-dark {
+        background-color: #343a40;
+        color: white;
+    }
+
+    .btn-sm {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    // Search functionality
+    document.getElementById("searchBox").addEventListener("keyup", function () {
+        var searchValue = this.value.toLowerCase();
+        var rows = document.querySelectorAll("#userTable tr");
+
+        rows.forEach(function (row) {
+            var username = row.querySelector("td:nth-child(1)").textContent.toLowerCase();
+            var email = row.querySelector("td:nth-child(5)").textContent.toLowerCase();
+
+            if (username.includes(searchValue) || email.includes(searchValue)) {
+                row.style.display = "";
+            } else {
+                row.style.display = "none";
+            }
+        });
+    });
+
+    $(document).ready(function () {
+        $('.delete-btn').click(function () {
+            var userId = $(this).data('user-id');
+            if (confirm("Are you sure you want to delete this user?")) {
+                $.ajax({
+                    url: '/Admin/DeleteUser', // تأكد من أن هذا هو المسار الصحيح
+                    type: 'DELETE',
+                    data: { userId: userId },
+                    success: function (response) {
+                        if (response.success) {
+                            alert('User deleted successfully.');
+                            // إزالة الصف من الجدول
+                            $('#userRow_' + userId).remove();
+                        } else {
+                            alert('Failed to delete the user.');
+                        }
+                    },
+                    error: function () {
+                        alert('An error occurred while deleting the user.');
+                    }
+                });
+            }
+        });
+    });
+
+</script>

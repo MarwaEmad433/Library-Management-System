@@ -1,0 +1,148 @@
+﻿@model IEnumerable<Library_Management_System.Models.Book>
+
+@{
+    ViewBag.Title = "Books";
+    var successMessage = TempData["SuccessMessage"] as string; // الحصول على الرسالة
+}
+
+@if (!string.IsNullOrEmpty(successMessage)) // التحقق مما إذا كانت الرسالة موجودة
+{
+    <div class="alert alert-success" role="alert">
+        @successMessage
+    </div>
+}
+
+<h2 class="my-4" style="padding-bottom: 10px;">Available Books</h2>
+
+<!-- Search Toolbar and Add Book Button in the same row -->
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <a href="/admin/AddBook" class="btn btn-success" style="margin-left: 80px; color: white;">Add New Book</a>
+
+    <div class="form-inline">
+        <label for="searchBox" class="mr-2" style="color: black;">Search:</label>
+        <input type="text" id="searchBox" class="form-control" placeholder="Search for books..." style="width: 300px; margin-left: 5px; margin-right: 80px;">
+    </div>
+</div>
+
+<!-- Books Table -->
+<div class="table-responsive">
+    <table class="table table-striped table-bordered" style="width: 100%; margin: 0 auto;">
+        <thead class="thead-dark">
+            <tr>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Author</th>
+                <th>Copies</th>
+                <th>ISBN</th>
+                <th>Date Added</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="bookTable">
+            @foreach (var book in Model)
+            {
+                <tr id="bookRow_@book.BookID">
+                    <td>@book.BookTitle</td>
+                    <td>@book.BookCategory</td>
+                    <td>@book.BookAuthor</td>
+                    <td>@book.BookCopies</td>
+                    <td>@book.BookISBN</td>
+                    <td>@book.BookDateAdded.ToShortDateString()</td>
+                    <td>@book.BookStatus</td>
+                    <td>
+                        <a href="/Admin/EditBook/@book.BookID" class="btn btn-warning btn-sm" style="color:white;">Edit</a>
+                        <a href="/Admin/Details/@book.BookID" class="btn btn-info btn-sm" style="color:white;">Details</a>
+                        <button class="btn btn-danger btn-sm delete-btn" data-book-id="@book.BookID" style="color:white;">Delete</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<style>
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 10px;
+    }
+
+    .table-responsive {
+        padding: 5px;
+        width: 90%;
+        margin: 0 auto;
+        padding-bottom: 50px;
+    }
+
+    thead th {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    tbody td {
+        text-align: center;
+    }
+
+    .thead-dark {
+        background-color: #343a40;
+        color: white;
+    }
+
+    .btn-sm {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    // Search functionality
+    document.getElementById("searchBox").addEventListener("keyup", function () {
+        var searchValue = this.value.toLowerCase();
+        var rows = document.querySelectorAll("#bookTable tr");
+
+        rows.forEach(function (row) {
+            var title = row.querySelector("td:nth-child(1)").textContent.toLowerCase();
+            var category = row.querySelector("td:nth-child(2)").textContent.toLowerCase();
+            var author = row.querySelector("td:nth-child(3)").textContent.toLowerCase();
+
+            if (title.includes(searchValue) || category.includes(searchValue) || author.includes(searchValue)) {
+                row.style.display = "";
+            } else {
+                row.style.display = "none";
+            }
+        });
+    });
+
+    // Delete functionality
+    $(document).ready(function () {
+        $('.delete-btn').click(function () {
+            var bookId = $(this).data('book-id');
+            if (confirm("Are you sure you want to delete this book?")) {
+                $.ajax({
+                    url: '/Admin/Delete', // تأكد من أن هذا هو المسار الصحيح
+                    type: 'DELETE',
+                    data: { bookId: bookId },
+                    success: function (response) {
+                        if (response.success) {
+                            alert('Book deleted successfully.');
+                            // إزالة الصف من الجدول
+                            $('#bookRow_' + bookId).remove();
+                        } else {
+                            alert('Failed to delete the book.');
+                        }
+                    },
+                    error: function () {
+                        alert('An error occurred while deleting the book.');
+                    }
+                });
+            }
+        });
+    });
+</script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

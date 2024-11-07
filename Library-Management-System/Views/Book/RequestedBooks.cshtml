@@ -1,0 +1,49 @@
+﻿@model IEnumerable<dynamic>
+
+<header>
+    <h1 class="text-center">Requested Books</h1>
+    <hr class="my-4">
+</header>
+
+<div class="row mx-3">
+    <!-- إضافة هوامش جانبية هنا -->
+    @foreach (var request in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <!-- استخدام 4 أعمدة لكل بطاقة -->
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">@request.BookTitle</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">@request.Author</h6>
+                    <p class="card-text">Request Date: @request.RequestDate.ToString("yyyy-MM-dd")</p>
+                    <form method="post" action="/book/Cancel">
+                        <input type="hidden" name="requestId" value="@request.RequestId" />
+                        <button type="submit" class="btn btn-danger">Cancel Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<style>
+    /* تخصيص بعض الأنماط لتنسيق البطاقات */
+    .card {
+        border: 1px solid #dee2e6; /* حد خفيف حول البطاقة */
+        border-radius: 0.25rem; /* زوايا البطاقة */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+    }
+
+    .card-title {
+        font-size: 1.25rem; /* حجم عنوان البطاقة */
+        font-weight: bold; /* سمك خط العنوان */
+    }
+
+    .card-subtitle {
+        font-size: 1rem; /* حجم الخط الفرعي */
+    }
+
+    .card-text {
+        font-size: 0.9rem; /* حجم نص التفاصيل */
+    }
+</style>

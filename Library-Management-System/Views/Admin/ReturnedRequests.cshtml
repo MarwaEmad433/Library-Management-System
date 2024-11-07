@@ -1,0 +1,135 @@
+﻿@model IEnumerable<Library_Management_System.Models.Transaction>
+
+@{
+    ViewBag.Title = "Returned Book Requests";
+    var successMessage = TempData["SuccessMessage"] as string; // للحصول على الرسالة
+}
+
+@if (!string.IsNullOrEmpty(successMessage)) // التحقق مما إذا كانت الرسالة موجودة
+{
+    <div class="alert alert-success" role="alert">
+        @successMessage
+    </div>
+}
+
+<h2 class="my-4" style="text-align: center; padding-bottom: 10px;">Returned Book Requests</h2>
+
+<!-- شريط البحث -->
+<div class="d-flex justify-content-right mb-4">
+    <div class="form-inline">
+        <label for="searchBox" class="mr-2" style="color: black; margin-left: 80px">Search:</label>
+        <input type="text" id="searchBox" class="form-control" placeholder="Search for returned requests..." style="width: 300px; margin-left: 5px;">
+    </div>
+</div>
+
+<!-- جدول الطلبات المعتمدة -->
+<div class="table-responsive">
+    <table class="table table-striped table-bordered" style="width: 100%; margin: 0 auto;">
+        <thead class="thead-dark">
+            <tr>
+                <th>Book Title</th>
+                <th>Book ISBN</th>
+                <th>Return Date</th> <!-- تاريخ الإرجاع -->
+                <th>User Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="returnedRequestsTable">
+            @foreach (var request in Model)
+            {
+                <tr id="row-@request.TranID">
+                    <td>@request.BookTitle</td>
+                    <td>@request.BookISBN</td>
+                    <td>@request.TranDate.ToShortDateString()</td> <!-- استخدام TranDate كتاريخ الإرجاع -->
+                    <td>@request.Username</td>
+                    <td>
+                        <a href="#" data-id="@request.TranID" class="btn btn-primary btn-sm accept-return" style="margin-right:2px; color:white;">Accept</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div id="responseMessage" class="alert" style="display: none;"></div>
+</div>
+
+<style>
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 10px;
+    }
+
+    .table-responsive {
+        padding: 5px;
+        width: 90%;
+        margin: 0 auto;
+        padding-bottom: 50px;
+    }
+
+    thead th {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    tbody td {
+        text-align: center;
+    }
+
+    .thead-dark {
+        background-color: #343a40;
+        color: white;
+    }
+
+    .btn-sm {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+</style>
+
+<!-- سكربت بحث -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    document.getElementById('searchBox').addEventListener('keyup', function () {
+        let filter = this.value.toLowerCase();
+        let rows = document.querySelectorAll('#returnedRequestsTable tr');
+
+        rows.forEach(row => {
+            let title = row.cells[0].textContent.toLowerCase();
+            let isbn = row.cells[1].textContent.toLowerCase();
+            let user = row.cells[3].textContent.toLowerCase();
+
+            if (title.includes(filter) || isbn.includes(filter) || user.includes(filter)) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+        });
+    });
+
+    // AJAX request for Accept Return
+    $(document).on('click', '.accept-return', function (e) {
+        e.preventDefault(); // Prevent the default action
+
+        var button = $(this);
+        var id = button.data('id');
+
+        $.ajax({
+            url: '@Url.Action("AcceptReturn", "Admin")',
+            type: 'POST',
+            data: { id: id },
+            success: function (response) {
+                if (response.success) {
+                    $('#row-' + id).remove(); // Remove the row from the table
+                    alert(response.message); // Show success alert
+                } else {
+                    alert(response.message); // Show error alert
+                }
+            },
+            error: function () {
+                alert('Error processing the request.'); // Show error alert
+            }
+        });
+    });
+
+</script>
